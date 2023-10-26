@@ -11,57 +11,107 @@
 
 </head>
 <body style="background-color: #4287f5;">
-    <button name="button" value="OK" type="button" onclick="hello()">Click</button>  
-    <form action="mailto:pawel.28.wohl@gmail.com" method="post" enctype="text/plain"><div>
+    <button name="button" value="OK" type="button" onclick="hello()">Click</button>
+    <h1>Formularz przyjęcia na zajęcia muzyczne</h1>
+    <form subject="Paweł Wohlfahrt" action="mailto:mkryniew@ids.gda.pl" method="post" enctype="text/plain"><div>
+        <table><thead>
+        <tr>
+        <tr>
         <!-- Podstawowe pole tekstowe -->
         <input name="Imię">Podaj swoje imię<br>
         <input name="Nazwisko">Podaj swoje nazwisko
+        </tr>
         <!-- Pole typu RADIO -->
+        <th>
             <p>Podaj swoją płeć:</p>
             <input type="radio" name="Płeć" value="Kobieta">Kobieta<br/>
             <input type="radio" name="Płeć" value="Mężczyzna">Mężczyzna<br/>
             <input type="radio" name="Płeć" value="Mężczyzna">Inna
+        </th>
             <!-- Pole typu RADIO -->
+            <th>
             <p>Ile masz lat?</p>
             <input type="radio" name="Wiek" value="15-19">18 lub mniej
             <input type="radio" name="Wiek" value="20-29">19-29
             <input type="radio" name="Wiek" value="30-39">30-39
             <input type="radio" name="Wiek" value="40-60">40-60
             <input type="radio" name="Wiek" value="więcej niż 60">więcej niż 60 
+        </th>
+        <th>
+            <p>Na jakim instrumencie grasz?</p>
+            <input type="radio" name="instrument" value="fortepian">Fortepian
+            <input type="radio" name="instrument" value="gitele">Gitara elektryczna
+            <input type="radio" name="instrument" value="gitkla">Gitara klasyczna
+            <input type="radio" name="instrument" value="per">Perkusja
+        </th>
             <!-- Pole typu CHECKBOX -->
+        <th>
             <p>Jaką lubisz muzykę (możesz zaznaczyć więcej możliwości)?</p>
-            <input type="checkbox" name="Muzyka" value="Rock">Rock<br>
             <input type="checkbox" name="Muzyka" value="Heavy Metal">Heavy Metal<br>
             <input type="checkbox" name="Muzyka" value="Pop">Pop<br>
             <input type="checkbox" name="Muzyka" value="Techno">Techno<br>
             <input type="checkbox" name="Muzyka" value="Muzyka poważna">Muzyka poważna<br>
             <input type="checkbox" name="Muzyka" value="Inna">Inna (podaj jaka):
             <input name="Muzyka">
+        </th>
+        <th>
+            <p>Jakiech zespołów najczęściej słuchasz?</p>
+            <input type="checkbox" name="zes" value="Mettalica">Mettalica
+            <input type="checkbox" name="zes" value="Sabaton">Sabaton
+            <input type="checkbox" name="zes" value="Dawid">Dawid Podsiadło
+            <input type="checkbox" name="zes" value="Pw">Powerwolf
+            <input type="checkbox" name="zes" value="LP">Lady Punk
+            </th>
+            </tr>
+        </thead><tbody>
+            <tr>
+            <td>
+                <p>Jak często grasz?</p>
+                <input type="checkbox" name="t" value="Miesiąc">Raz na miesiąc
+                <input type="checkbox" name="t" value="Tydzień">Raz w tygodniu
+                <input type="checkbox" name="t" value="Dzień">Codziennie
+            </td>
             <!-- Lista rozwijalna (typ podstawowy) z zaznaczoną opcją domyślną -->
-            <p>Jakiej przeglądarki internetowej używasz?</p>
+            <td>
+            <p></p>
+            <select name="Poziom doświadczenia">
+                <option selected>Wybierz poziom doświadczenia</option>
+                <option>początkujący</option>
+                <option>średnio zaawansowany</option>
+                <option>zaawansowany</option>
+                <option>mistrz</option>
+            </select>
+            <select name="cele">
+                <option>Umieć grać</option>
+                <option>Rozpoznawać instrumenty</option>
+                <option>Umieć komponować</option>
+                <option>Poprostu zrelaksować się</option>
+                <option>Zdobyć wiedzę teoretyczną</option>
+                </select>
             <select name="Przeglądarka">
                 <option selected>Chrome</option>
                 <option>Opera</option>
                 <option>Firefox</option>
-                <option>Edge</option>
-                <option>Inna</option>
-            </select>
-            <!-- Lista rozwijalna (typ rozszerzony) z zaznaczoną opcją domyślną i zmniejszoną wysokością -->
-            <p>Jakie znasz systemy operacyjne (możesz wybrać kilka opcji trzymając klawisz Ctrl)?</p>
-            <select name="System operacyjny" multiple size="3">
-                <option selected>Windows</option>
-                <option>DOS</option>
-                <option>Linux</option>
-                <option>Inny</option>
-            </select>
+                </select>
+            </td>
+            <td>
+                <input name="sposób nauki" placeholder="Opisz swój sposób nauki"></input>
+                <input name="login" maxlength="30"></input>
+                <input type="password" id="haslo" name="haslo">
+            </td>
             <!-- Pole komentarza (o powiększonych rozmiarach oraz z tekstem domyślnym) -->
+            <td>
             <p>Podaj swój komentarz:</p>
             <textarea name="Komentarz" cols="50" rows="10">Proszę, wpisz tutaj jakiś komentarz...</textarea>
-            <br><br><br>
+            </td>
+            <td>
             <!-- Przycisk WYŚLIJ -->
             <input type="submit" value="Wyślij formularz">
             <!-- Przycisk WYCZYŚĆ DANE -->
-            <input type="reset" value="Wyczyść dane">
-        </div></form>
+            <input type="reset" value="Czyść">
+            </td>
+        </tbody>
+            </table>
+    </form>
     </body>
     </html>
